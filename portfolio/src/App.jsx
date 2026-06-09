@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import Navbar from "./navbar";
+import Hero from "./Hero";
+import Services from "./Services";
+
 
 function App() {
-
+  const [isDark, setIsDark] = useState(true);
 
   return (
-    <>
-    <h1 class="text-3xl text-red-500 font-bold underline">
-    Hello world!
-  </h1>
-    </>
+    <div style={{ background: isDark ? "#1e1e1e" : "#f0ece6", minHeight: "100vh", transition: "background 0.5s" }}>
+      <Navbar />
+      <Hero isDark={isDark} setIsDark={setIsDark} />
+      <Services isDark={isDark} desktopImg={null} />
+    </div>
   )
 }
 
-export default App
+export default App;
