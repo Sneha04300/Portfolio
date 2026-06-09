@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import sneha3Img from "./assets/sneha3.jpeg";
+import handSvg from "./assets/hand.svg";
 
 export default function Hero( {isDark, setIsDark }) {
   
@@ -93,9 +94,7 @@ export default function Hero( {isDark, setIsDark }) {
               <AnimatePresence mode="wait">
                 {showHand ? (
                   <motion.span key="hand" initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.7 }} transition={{ duration: 0.2 }}>
-                    <svg width="42" height="42" viewBox="0 0 64 64" fill="none">
-                      <path d="M20 52C20 52 10 44 10 28C10 24 13 21 17 21C17 21 17 14 21 12C25 10 28 13 28 16V10C28 7 31 5 34 6C37 7 38 10 38 13V16C38 14 41 12 44 14C47 16 46 20 46 20C46 20 50 21 50 26C50 36 44 46 38 50L20 52Z" fill={btnTxt}/>
-                    </svg>
+                    <img src={handSvg} alt="wave" style={{ width: 56, height: 56 }} />
                   </motion.span>
                 ) : (
                   <motion.span key="hi" initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.7 }} transition={{ duration: 0.2 }}
