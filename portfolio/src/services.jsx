@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // Replace this import with your actual desktop/workspace image
-// import desktopImg from "./assets/desktop.jpeg";
+import sneha2Img from "./assets/sneha2.png";
 
 const SERVICES = [
   {
